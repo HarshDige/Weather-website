@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>weather.com </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+ 
+ <script src="script.js"></script>
+
+
+ <style>
+
+
+  
+ </style>
+  </head>
+  <body>
+   
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#">weather App </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           
+            <form class="d-flex " role="search" style="padding-left: 1100px;"> 
+              <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search" id="searchc">
+              <button class="btn btn-outline-success" type="button" onclick="myfun()">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      
+
+      <h1 class="my-4 text-center">weather For <div id="cha"></div></h1>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Temperatures</h4>
+            </div>
+            <div class="card-body">
+              <img  id="wicon" src='weatherforec.jpg' height="100px" width="90px" alt="Enter city name"/>
+              <!-- <h1 class="card-title pricing-card-title">℃</h1> -->
+              <ul class="list-unstyled mt-3 mb-4">
+                
+                <li>Temperatures is <span id="temp"></span></li>
+                <li>Min Temperatures is <span id="temp_min"></span></li>
+                <li>Max Temperatures is <span id="temp_max"></span></li>
+                <li>visibility is <span id="visibility"></span></li>
+                
+            
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Humidity information</h4>
+            </div>
+            <div class="card-body">
+              <img src="h.jpg" alt="" width="120px" height="100px">
+              <!-- <h1 class="card-title pricing-card-title">%</h1> -->
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>cloud is  <span id="cloud"></span></li>
+                <li>Feel likes <span id="feel"></span></li>
+                <li>pressure is  <span id="pre"></span></li>
+                <li>humidity is  <span id="hum"></span></li>
+              </ul>
+             
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Wind information</h4>
+            </div>
+            <div class="card-body">
+              <!-- <h1 class="card-title pricing-card-title">0 km/hr</h1> -->
+            <img src="speed.jpg" alt="" height="100px" width="130px">
+              <ul class="list-unstyled mt-3 mb-4">
+               <li>wind speed is <span id="speed"></span></li>
+               <li>wind degre is <span id="deg"></span></li>
+               <li>Sunrise time is <span id="sun1"></span></li>
+               <li>Sunset time is <span id="sun2"></span></li>
+              </ul>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="display-6 text-center mb-4">weather of other common places</h2>
+      <div class="table-responsive">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th style="width: 10%;"></th>
+              <th style="width: 8%;">Temp</th>
+              <th style="width: 8%;">Temp_min</th>
+              <th style="width: 8%;">Temp_max </th>
+              <th style="width: 8%;">visibility</th>
+              <th style="width: 8%;">clouds </th>
+              <th style="width: 8%;">feels_like</th>
+              <th style="width: 8%;">pressure</th>
+              <th style="width: 8%;">humidity</th>
+              <th style="width: 8%;">Wind-speed</th>
+              <th style="width: 8%;">Wind-deg</th>
+              <th style="width: 8%;">sunrise</th>
+              <th style="width: 8%;">sunset</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">mumbai</th>
+              <td><span id="m-temp"></span></td>
+              <td><span id="m-temp_min"></span></td>
+              <td><span id="m-temp_max"></span></td>
+              <td><span id="m-visibility"></span></td>
+              <td><span id="m-cloud"></span></td>
+              <td><span id="m-feel"></span></td>
+              <td><span id="m-pre"></span></td>
+              <td><span id="m-hum"></span></td>
+              <td><span id="m-speed"></span></td>
+              <td><span id="m-deg"></span></td>
+              <td><span id="m-sun1"></span></td>
+              <td><span id="m-sun2"></span></td>
+              
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">delhi</th>
+              <td><span id="d-temp"></span></td>
+              <td><span id="d-temp_min"></span></td>
+              <td><span id="d-temp_max"></span></td>
+              <td><span id="d-visibility"></span></td>
+              <td><span id="d-cloud"></span></td>
+              <td><span id="d-feel"></span></td>
+              <td><span id="d-pre"></span></td>
+              <td><span id="d-hum"></span></td>
+              <td><span id="d-speed"></span></td>
+              <td><span id="d-deg"></span></td>
+              <td><span id="d-sun1"></span></td>
+              <td><span id="d-sun2"></span></td>
+            </tr>
+          </tbody>
+  
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">pune</th>
+              <td><span id="p-temp"></span></td>
+              <td><span id="p-temp_min"></span></td>
+              <td><span id="p-temp_max"></span></td>
+              <td><span id="p-visibility"></span></td>
+              <td><span id="p-cloud"></span></td>
+              <td><span id="p-feel"></span></td>
+              <td><span id="p-pre"></span></td>
+              <td><span id="p-hum"></span></td>
+              <td><span id="p-speed"></span></td>
+              <td><span id="p-deg"></span></td>
+              <td><span id="p-sun1"></span></td>
+              <td><span id="p-sun2"></span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Lucknow</th>
+              <td><span id="l-temp"></span></td>
+              <td><span id="l-temp_min"></span></td>
+              <td><span id="l-temp_max"></span></td>
+              <td><span id="l-visibility"></span></td>
+              <td><span id="l-cloud"></span></td>
+              <td><span id="l-feel"></span></td>
+              <td><span id="l-pre"></span></td>
+              <td><span id="l-hum"></span></td>
+              <td><span id="l-speed"></span></td>
+              <td><span id="l-deg"></span></td>
+              <td><span id="l-sun1"></span></td>
+              <td><span id="l-sun2"></span></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

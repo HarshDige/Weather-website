@@ -1,0 +1,43 @@
+{
+  "coord": {
+    "lon": 72.8333,
+    "lat": 21.1667
+  },
+  "weather": [
+    {
+      "id": 301,
+      "main": "Drizzle",
+      "description": "drizzle",
+      "icon": "09d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 301.14,
+    "feels_like": 307.58,
+    "temp_min": 301.14,
+    "temp_max": 301.14,
+    "pressure": 1000,
+    "humidity": 94
+  },
+  "visibility": 5000,
+  "wind": {
+    "speed": 5.14,
+    "deg": 200
+  },
+  "clouds": {
+    "all": 100
+  },
+  "dt": 1690119853,
+  "sys": {
+    "type": 1,
+    "id": 9071,
+    "country": "IN",
+    "sunrise": 1690072704,
+    "sunset": 1690120291
+  },
+  "timezone": 19800,
+  "id": 1255364,
+  "name": "Surat",
+  "cod": 200
+}

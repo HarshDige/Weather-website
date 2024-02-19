@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <div id="demo"></div>
+
+    <script>
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=surat&appid=c9c0a0c15bd79b757909300b586038f5').then((Response)=>{
+        Response.json().then((Response)=>{
+            console.log(Response);
+         })
+        }).catch((error)=>{
+            console.log('error');
+        })
+        
+        //const options = {method: 'GET'};
+        
+            //  fetch('https://api.openweathermap.org/data/2.5/weather?q=surat&appid=c9c0a0c15bd79b757909300b586038f5&%3Fq%3Dsura%26appid=')
+            //  .then(response => response.json())
+            //  .then(response => {
+                
+            //     console.log(response)
+                
+            //     // document.getElementById("demo").innerHTML = main[temp];
+            //     document.getElementById("demo").innerHTML = response.main.temp;
+            
+            // })
+            //  .catch(err => console.error(err));
+     </script>
+
+
+    
+    
+</body>
+</html>
